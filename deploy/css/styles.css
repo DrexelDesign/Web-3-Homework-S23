@@ -418,3 +418,19 @@ header #form-content > div {
   display: grid;
   grid-template-columns: 70% auto;
 }
+
+/* =============
+    New
+============= */
+#new section img {
+  width: 100%;
+}
+#new section .card-data {
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". card-data .";
+  background-color: violet;
+}
+#new section .card-data > div {
+  grid-area: card-data;
+}

@@ -9,12 +9,12 @@
   ],
   "creatorBuild" : "34484",
   "files" : {
-    "\/Assets\/In-class-S23.fig" : {
+    "\/assets\/In-class-S23.fig" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/Assets\/In-class-S23.fig",
+      "oAP" : "\/assets\/In-class-S23.fig",
       "oF" : 0
     },
     "\/deploy\/css\/styles.css" : {

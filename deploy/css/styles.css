@@ -545,15 +545,74 @@ footer > div {
 /* =============
     New
 ============= */
-#new section img {
+@media (min-width: 768px) {
+  #new {
+    display: grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". new .";
+  }
+}
+@media (min-width: 1440px) {
+  #new {
+    grid-template-columns: auto 1200px auto;
+  }
+}
+#new > div {
+  display: grid;
+  gap: 16px;
+}
+@media (min-width: 768px) {
+  #new > div {
+    grid-area: new;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "nt nt nt nt" "n1 n1 n2 n2" "n3 n3 n4 n4" ".. n5 n5 ..";
+  }
+}
+@media (min-width: 1024px) {
+  #new > div {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: "nt nt nt nt nt nt" "n1 n1 n2 n2 n3 n3" ".. n4 n4 n5 n5 ..";
+  }
+}
+@media (min-width: 768px) {
+  #new > div h1 {
+    grid-area: nt;
+  }
+}
+#new > div section img {
   width: 100%;
 }
-#new section .card-data {
+#new > div section .card-data {
   display: grid;
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". card-data .";
   background-color: violet;
 }
-#new section .card-data > div {
+#new > div section .card-data > div {
   grid-area: card-data;
+}
+@media (min-width: 768px) {
+  #new > div #n1 {
+    grid-area: n1;
+  }
+}
+@media (min-width: 768px) {
+  #new > div #n2 {
+    grid-area: n2;
+  }
+}
+@media (min-width: 768px) {
+  #new > div #n3 {
+    grid-area: n3;
+  }
+}
+@media (min-width: 768px) {
+  #new > div #n4 {
+    grid-area: n4;
+  }
+}
+@media (min-width: 768px) {
+  #new > div #n5 {
+    grid-area: n5;
+  }
 }

@@ -13,3 +13,27 @@ ul{
 .resize-img{
     width: 100%;
 }
+
+.show-large {
+    display: none;
+
+    @include lg{
+        display: block;
+    }
+}
+
+.show-extra-large {
+    display: none;
+
+    @include xxl{
+        display: block;
+    }
+}
+
+.hide-large {
+    display: block;
+
+    @include lg{
+        display: hide !important;
+    }
+}

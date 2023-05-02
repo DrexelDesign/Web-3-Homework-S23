@@ -3,13 +3,40 @@
 ============= */
 
 #hero{
-    section{
-        display: grid;
-        grid-template-columns: 16px auto 16px;
-        grid-template-areas: ". hero-sub .";
-        background-color: peachpuff;
-        >div{
-            grid-area: hero-sub;
+
+    #hero-bottom{
+
+        @include md{
+            display: grid;
+            grid-template-columns: 40% auto;
+        }
+
+        @include lg{
+            grid-template-columns: 50% auto;
+        }
+
+        section{
+            display: grid;
+            grid-template-areas: ". hero-sub .";
+
+            >div{
+                grid-area: hero-sub;
+            }
+        }
+
+        #hero-bottom-left{
+            background-color: peachpuff;
+            @include xxl{
+                grid-template-columns: 20% auto 16px;
+            }
+        }
+
+        #hero-bottom-right{
+            background-color: aquamarine;
+            @include xxl{
+                grid-template-columns: 16px auto 20%;
+            }
         }
     }
+    
 }

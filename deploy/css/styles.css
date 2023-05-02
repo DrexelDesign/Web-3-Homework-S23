@@ -451,13 +451,35 @@ footer > div {
 /* =============
     Sub-Hero
 ============= */
-#sub-hero aside {
+@media (min-width: 768px) {
+  #sub-hero {
+    display: grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". sub-hero-cards .";
+  }
+}
+@media (min-width: 768px) and (min-width: 1440px) {
+  #sub-hero {
+    grid-template-columns: auto 1200px auto;
+  }
+}
+#sub-hero > div {
+  display: grid;
+  gap: 16px;
+}
+@media (min-width: 768px) {
+  #sub-hero > div {
+    grid-area: sub-hero-cards;
+    grid-template-columns: 50% auto;
+  }
+}
+#sub-hero > div aside {
   display: grid;
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". sub-hero .";
-}
-#sub-hero aside > div {
   background-color: olive;
+}
+#sub-hero > div aside > div {
   grid-area: sub-hero;
   display: grid;
   grid-template-columns: 70% auto;

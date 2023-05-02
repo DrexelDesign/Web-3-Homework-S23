@@ -3,16 +3,37 @@
 ============= */
 
 #sub-hero{
-    aside{
+    @include md{
         display: grid;
         grid-template-columns: 16px auto 16px;
-        grid-template-areas: ". sub-hero .";
-        
-        >div{
-            background-color: olive;
-            grid-area: sub-hero;
-            display: grid;
-            grid-template-columns: 70% auto;
+        grid-template-areas: ". sub-hero-cards .";
+
+        @include xxl{
+            grid-template-columns: auto 1200px auto;
         }
     }
+    >div{
+        display: grid;
+        gap: 16px;
+        
+        @include md{
+            grid-area: sub-hero-cards;
+            grid-template-columns: 50% auto;
+        }
+
+        aside{
+            display: grid;
+            grid-template-columns: 16px auto 16px;
+            grid-template-areas: ". sub-hero .";
+            background-color: olive;
+            
+            >div{
+                
+                grid-area: sub-hero;
+                display: grid;
+                grid-template-columns: 70% auto;
+            }
+        }
+    }
+    
 }

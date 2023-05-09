@@ -13,6 +13,7 @@ html {
 :root {
   --black: #000000;
   --white: #ffffff;
+  --gray: #979797;
   --blueDark: #293241;
   --blueLight: #E0FBFC;
   --blue: #3D5A80;
@@ -475,6 +476,7 @@ footer {
   grid-template-areas: ". footer .";
   background-color: #293241;
   color: white;
+  padding: 24px 0;
 }
 @media (min-width: 1440px) {
   footer {
@@ -489,6 +491,7 @@ footer > div {
     display: grid;
     grid-template-columns: 50% auto;
     grid-template-areas: "f1 f2" "f1 f3";
+    gap: 16px;
   }
 }
 @media (min-width: 1024px) {
@@ -497,20 +500,69 @@ footer > div {
     grid-template-areas: "f1 f2 f3";
   }
 }
+footer > div #f1 {
+  color: var(--blueInput);
+}
 @media (min-width: 768px) {
   footer > div #f1 {
     grid-area: f1;
   }
+}
+footer > div #f1 h1 {
+  color: white;
+}
+footer > div #f1 section {
+  display: flex;
+}
+footer > div #f1 section i {
+  color: var(--red);
+  font-size: 1.25rem;
+  margin-right: 16px;
 }
 @media (min-width: 768px) {
   footer > div #f2 {
     grid-area: f2;
   }
 }
+footer > div #f2 form input {
+  background-color: var(--gray);
+  width: 100%;
+  border-radius: 0;
+  border: none;
+  box-sizing: border-box;
+  padding: 16px 8px;
+}
+footer > div #f2 form div {
+  text-align: right;
+}
+footer > div #f2 form div button {
+  margin-top: 16px;
+  border: none;
+}
 @media (min-width: 768px) {
   footer > div #f3 {
     grid-area: f3;
   }
+}
+@media (min-width: 1024px) {
+  footer > div #f3 {
+    text-align: right;
+  }
+}
+footer > div #f3 ul {
+  display: flex;
+}
+@media (min-width: 1024px) {
+  footer > div #f3 ul {
+    justify-content: flex-end;
+  }
+}
+footer > div #f3 ul li {
+  margin-right: 16px;
+}
+footer > div #f3 ul li a {
+  color: white;
+  font-size: 1.875rem;
 }
 
 /* =============

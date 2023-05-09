@@ -597,6 +597,7 @@ footer > div {
   color: white;
   display: flex;
   align-items: center;
+  box-shadow: 0px 1px 1px rgba(42, 48, 54, 0.296793);
 }
 #sub-hero > div .sub-hero-card a {
   margin-top: 8px;
@@ -692,12 +693,16 @@ footer > div {
 }
 #new > div section img {
   width: 100%;
+  font-size: 0;
+  display: block;
 }
 #new > div section .card-data {
   display: grid;
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". card-data .";
-  background-color: violet;
+  background-color: var(--blueLight);
+  padding: 16px 0;
+  box-shadow: 0px 1px 1px rgba(42, 48, 54, 0.3);
 }
 #new > div section .card-data > div {
   grid-area: card-data;

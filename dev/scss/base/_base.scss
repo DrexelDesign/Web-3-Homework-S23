@@ -10,6 +10,18 @@ ul{
     }
 }
 
+.content-spacing-top{
+    margin-top: 24px;
+
+    @include md{
+        margin-top: 40px;
+    }
+
+    @include xl{
+        margin-top: 56px;
+    }
+}
+
 .resize-img{
     width: 100%;
 }

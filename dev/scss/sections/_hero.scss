@@ -3,7 +3,7 @@
 ============= */
 #hero{
 
-    section{
+    #hero-container{
         // this is for the 40 60 split below the hero image
         @include md{
             display: grid;
@@ -16,28 +16,64 @@
 
         aside{
             // this grid is to give me the 16px of space right and left on the mobile size
-            display: grid;
-            grid-template-columns: 16px auto 16px;
-            grid-template-areas: ". hero-aside .";
+            // display: grid;
+            // grid-template-columns: 16px auto 16px;
+            // grid-template-areas: ". hero-aside .";
+            padding: 16px 0;
             
-            >div{
-               
+            .hero-content-container{
                 grid-area: hero-aside;
+                display: flex;
+                padding: 16px;
+
+                h1{
+                    font-size: rem-calc(20);
+                }
+
+                .hero-links{
+                    margin-left: auto;
+                    align-items: center;
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    
+
+                    a{
+                        color: var(--blueDark);
+
+                        @include lg{
+                            display: flex !important;
+                        }
+
+                        i{
+                            margin-left: 8px;
+                        }
+                    }
+                    
+                }
             }
         }
 
         #hero-left{
-            background: fuchsia;
-            @include xxl{
-                grid-template-columns: 20% auto 16px;
+            background: var(--yellowDark);
+
+            @include lg{
+                padding-left: 10vw;
             }
+            // @include xxl{
+            //     grid-template-columns: 20% auto 16px;
+            // }
         }
 
         #hero-right{
-            background: purple;
-            @include xxl{
-                grid-template-columns: 16px auto 20%;
+            background: var(--yellow);
+
+            @include lg{
+                padding-right: 10vw;
             }
+            // @include xxl{
+            //     grid-template-columns: 16px auto 20%;
+            // }
         }
     }
     
@@ -57,29 +93,55 @@
     }
 
     >div{
+        display: grid;
+        gap: 16px;
+
         @include md{
              grid-area: hero-sub;
-
-             display: grid;
              grid-template-columns: 50% auto;
         }
-        
-        .hero-sub-content{
-            >div{
-                grid-area: hero-subs;
-                // this grid controls the content inside the cards --- we will be replacing this will flex!
-                display: grid;
-                grid-template-columns: 50% auto;
-            }
-    
-            #hero-sub-left{
-                background-color: brown;
-            }
-    
-            #hero-sub-right{
-                background-color: sandybrown;
+
+        .hero-sub-card{
+            background-color: var(--gray);
+            box-shadow: 0px 1px 1px rgba(42, 48, 54, 0.296793);
+            padding: 16px;
+            display: flex;
+            align-items: center;
+
+            
+
+            aside{
+                margin-left: auto;
             }
         }
+        
+        // .hero-sub-content{
+
+        //     >div{
+        //         grid-area: hero-subs;
+        //         // this grid controls the content inside the cards --- we will be replacing this will flex!
+        //         display: grid;
+        //         grid-template-columns: 50% auto;
+
+        //         a{
+        //             background-color: var(--yellow);
+        //             padding: 12px 16px;
+        //             display: inline-block;
+        //         }
+        //     }
+    
+        //     #hero-sub-left{
+        //         background-color: var(--gray);
+        //         box-shadow: 0px 1px 1px rgba(42, 48, 54, 0.296793);
+        //         padding: 16px;
+        //     }
+    
+        //     #hero-sub-right{
+        //         background-color: var(--gray);
+        //         box-shadow: 0px 1px 1px rgba(42, 48, 54, 0.296793);
+        //         padding: 16px;
+        //     }
+        // }
 
     }
 

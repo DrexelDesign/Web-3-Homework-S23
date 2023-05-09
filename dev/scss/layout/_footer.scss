@@ -6,8 +6,14 @@ footer{
     grid-template-columns: 16px auto 16px;
     grid-template-areas: ". footer .";
 
-    background-color: #2A3036;
-    color: white;
+    background-color: var(--blueDark);
+    color: var(--white);
+
+    padding: 16px 0 24px;
+
+    @include md{
+        padding: 24px 0 32px;
+    }
 
     @include xxl{
         grid-template-columns: auto 1200px auto;
@@ -22,6 +28,7 @@ footer{
             grid-template-areas: 
             "f1 f2"
             "f1 f3";
+            gap: 16px;
         }
 
         @include lg{
@@ -31,8 +38,25 @@ footer{
         }
 
         #f1{
+            margin-bottom: 16px;
             @include md{
                 grid-area: f1;
+            }
+
+            h1{
+                margin-bottom: 16px;
+            }
+
+            .f1-content{
+                display: flex;
+                align-items: center;
+                margin-bottom: 16px;
+
+                i{
+                    color: var(--yellow);
+                    font-size: rem-calc(25);
+                    margin-right: 8px;
+                }
             }
         }
 
@@ -40,11 +64,65 @@ footer{
             @include md{
                 grid-area: f2;
             }
+
+            h1{
+                margin-bottom: 16px;
+            }
+
+            form{
+                display: flex;
+                flex-direction: column;
+
+                input{
+                    width: 100%;
+                    border: none;
+                    background-color: var(--blueLight);
+                    box-sizing: border-box;
+                    padding: 16px 8px;
+                    border-radius: 0;
+                }
+                div{
+                    // text-align: right;
+                    button{
+                        border: none;
+                        color: var(--blueDark);
+                    }
+                }
+                
+            }
         }
 
         #f3{
             @include md{
                 grid-area: f3;
+                margin-top: -65px;
+            }
+
+            @include lg{
+                margin-top: 0;
+            }
+
+            h1{
+                margin-bottom: 16px;
+            }
+
+
+            ul{
+                display: flex;
+
+
+                @include lg{
+                    justify-content: flex-end;
+
+                }
+
+                li{
+                    margin-right: 16px;
+                    a{
+                        color: white;
+                        font-size: rem-calc(20);
+                    }
+                }
             }
         }
     }

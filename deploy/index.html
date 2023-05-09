@@ -16,7 +16,6 @@
             <div>
                 <img src="img/header/logo.jpg" alt="Shawmut logo">
             </div>
-            
         </section>
         
     
@@ -25,7 +24,8 @@
                 <form action="#">
                     <input type="search" placeholder="Search our inventory">
                     <button>
-                        <img src="img/header/search.svg" alt="search icon">
+                        <!-- <img src="img/header/search.svg" alt="search icon"> -->
+                        <i class="fa-light fa-magnifying-glass"></i>
                     </button>
                 </form>
             </div>
@@ -34,29 +34,58 @@
     <section id="hero">
             <img src="img/hero/hero.jpg" alt="loading stones" class="resize-img hide-large">
         
-            <section>
+            <section id="hero-container">
                 <aside id="hero-left">
-                    <div>
-                        <h1>2019 Morooka MST2200VDR</h1>
-                        <p>Rotating Rubber Track Carrier</p>
-                        <a href="#"><span class="show-large">Details</span> <img src="img/global/arrow.svg" alt="link arrow"></a>
+                    <div class="hero-content-container">
+                        <section>
+                            <h1>2019 Morooka MST2200VDR</h1>
+                            <p>Rotating Rubber Track Carrier</p>
+                        </section>
+                        <section class="hero-links">
+                            <!-- <a href="#"><span class="show-large">Details</span> <img src="img/global/arrow.svg" alt="link arrow"></a> -->
+                            <a href="#"><span class="show-large">Details</span> <i class="fa-sharp fa-solid fa-sort-up fa-rotate-90"></i></a>
+                        </section>
                     </div>
-                    
                 </aside>
             
                 <aside id="hero-right">
-                    <div>
-                        <h3><span>Location:</span> South Easton, Mass, USA</h3>
-                        <h3><span>Price:</span> Upon Request</h3>
-                        <a href="#"><span class="show-large">Details</span> <i class="fa-sharp fa-solid fa-sort-up fa-rotate-90"></i></a>
+                    <div class="hero-content-container">
+                        <section>
+                            <h3><span>Location:</span> South Easton, Mass, USA</h3>
+                            <h3><span>Price:</span> Upon Request</h3>
+                        </section>
+                        <section class="hero-links">
+                            <a href="#"><span class="show-large">Details</span> <i class="fa-sharp fa-solid fa-sort-up fa-rotate-90"></i></a>
+                        </section>
                     </div>
                 </aside>
             </section>
         </section>
         
-        <section id="hero-sub">
+        <section id="hero-sub" class="content-spacing-top">
             <div>
-                <section class="hero-sub-content">
+                <section class="hero-sub-card">
+                    <section>
+                        <h1>Planning your next lift?</h1>
+                        <a href="#" class="yellow-button">Start here</a>
+                    </section>
+                    <aside>
+                        <img src="img/hero/planning.jpg" alt="planning icon">
+                   </aside>
+                </section>
+        
+                <section class="hero-sub-card">
+                    <section>
+                        <h1>Need parts?</h1>
+                        <a href="#" class="yellow-button">Order here</a>
+                    </section>
+        
+                    <aside>
+                        <img src="img/hero/parts.jpg" alt="parts icon">
+                    </aside>
+                </section>
+        
+                <!-- <section class="hero-sub-content">
                     <div id="hero-sub-left">
                         <section>
                             <h1>Planning your next lift?</h1>
@@ -72,24 +101,24 @@
                 <section class="hero-sub-content">
                     <div id="hero-sub-right">
                         <section>
-                            <h1>Neet parts?</h1>
+                            <h1>Need parts?</h1>
                             <a href="#">Order here</a>
                         </section>
                         <aside>
                             <img src="img/hero/parts.jpg" alt="parts icon">
                         </aside>
                     </div>
-                </section>
+                </section> -->
             </div>
         </section>
-    <section id="gallery">
+    <section id="gallery" class="content-spacing-top">
                 <ul>
                     <li id="g1"><img src="img/gallery/gallery-1.jpg" alt="Cat D10" class="resize-img"></li>
                     <li id="g2"><img src="img/gallery/gallery-2.jpg" alt="Cat Longarm" class="resize-img"></li>
                     <li id="g3"><img src="img/gallery/gallery-3.jpg" alt="Cat Roller" class="resize-img show-extra-large"></li>
                 </ul>
             </section>
-    <section id="new">
+    <section id="new" class="content-spacing-top">
                     <div>
                         <h1>What’s New</h1>
                 
@@ -100,7 +129,7 @@
                                     <div>
                                         <h1>New NBT60XL Hits the Market</h1>
                                         <p>Manitowoc’s product innovation continues, with the latest evolution in its National Crane product line hitting the market: the NBT60XL.</p>
-                                        <a href="#">Read More</a>
+                                        <a href="#" class="yellow-button">Read More</a>
                                     </div>
                                 </section>
                             </li>
@@ -111,7 +140,7 @@
                                     <div>
                                         <h1>NCCCO Course Offered</h1>
                                         <p>Shawmut Equipment, with New England Crane School, will be hosting test preparation and testing for the NCCCO certifications in October.</p>
-                                        <a href="#">Read More</a>
+                                        <a href="#" class="yellow-button">Read More</a>
                                     </div>
                                 </section>
                             </li>
@@ -123,7 +152,7 @@
                                     <div>
                                         <h1>New Short Configuration</h1>
                                         <p>Shawmut is excited to introduce a new short configuration National NBT45127-1 boom truck developed as a collaboration between Shawmut and </p>
-                                        <a href="#">Read More</a>
+                                        <a href="#" class="yellow-button">Read More</a>
                                     </div>  
                                 </section>  
                             </li>
@@ -134,7 +163,7 @@
                                     <div>
                                         <h1>New Fallbach Tree Handler</h1>
                                         <p>Heavy-Duty Durable Tree Handler mounted on Compact GMK3060 Chassis For Sale & Immediately Available</p>
-                                        <a href="#">Read More</a>
+                                        <a href="#" class="yellow-button">Read More</a>
                                     </div>
                                 </section>  
                             </li>
@@ -145,7 +174,7 @@
                                     <div>
                                         <h1>Finding Room in a Tight Space </h1>
                                         <p>Manitowoc’s product innovation continues, with the latest evolution in its National Crane product line hitting the market: the NBT60XL.</p>
-                                        <a href="#">Read More</a>
+                                        <a href="#" class="yellow-button">Read More</a>
                                     </div>
                                 </section>  
                             </li>
@@ -153,19 +182,19 @@
                     </div>
                     
                 </section>
-    <footer>
+    <footer class="content-spacing-top">
                         <div>
                         <!-- Location -->
                             <section id="f1">
                                 <h1>Locations</h1>
                                 <section>
                                     <h2>Connecticut</h2>
-                                    <section>
+                                    <section class="f1-content">
                                         <i class="fa-light fa-location-arrow"></i>
                                         <address>20 Tolland  Turnpike <br>Manchester, CT 06042-1763</address>
                                     </section>
                     
-                                    <section>
+                                    <section class="f1-content">
                                         <i class="fa-light fa-mobile-notch"></i>
                                         <a href="#">(800) 829-4161</a>
                                     </section>
@@ -173,12 +202,12 @@
                     
                                 <section>
                                     <h2>Massachusetts</h2>
-                                    <section>
+                                    <section class="f1-content">
                                         <i class="fa-light fa-location-arrow"></i>
                                         <address>136 Eastman Street South <br> Easton,  MA 02375</address>
                                     </section>
                     
-                                    <section>
+                                    <section class="f1-content">
                                         <i class="fa-light fa-mobile-notch"></i>
                                         <a href="#">(877) 526-9213</a>
                                     </section>
@@ -186,12 +215,12 @@
                     
                                 <section>
                                     <h2>Nova Scotia</h2>
-                                    <section>
+                                    <section class="f1-content">
                                         <i class="fa-light fa-location-arrow"></i>
                                         <address>318 Park Road <br> Elmsdale, NS B2S 0G25</address>
                                     </section>
                     
-                                    <section>
+                                    <section class="f1-content">
                                         <i class="fa-light fa-mobile-notch"></i>
                                         <a href="#">(902) 883-7450</a>
                                     </section>
@@ -203,7 +232,10 @@
                                 <h1>Newsletter Sign Up Sign Up</h1>
                                 <form action="#">
                                     <input type="email" placeholder="Email Address">
-                                    <button>Sign Up</button>
+                                    <div>
+                                        <button class="yellow-button">Sign Up</button>
+                                    </div>
+                                   
                                 </form>
                             </section>
                     

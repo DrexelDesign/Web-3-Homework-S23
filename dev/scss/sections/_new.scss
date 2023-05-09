@@ -17,7 +17,17 @@
             grid-area: new;
         }
 
+        h1{
+            margin-bottom: 16px;
+
+            @include md{
+                margin-bottom: 24px;
+            }
+        }
+
         ul{
+            display: grid;
+            gap: 16px;
             @include md{
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
@@ -25,7 +35,6 @@
                 "n1 n1 n2 n2"
                 "n3 n3 n4 n4"
                 ".. n5 n5 ..";
-                gap: 16px;
             }
 
             @include lg{
@@ -37,6 +46,8 @@
 
 
             li{
+                background-color: var(--grayLight);
+                box-shadow: 0px 1px 1px rgba(42, 48, 54, 0.3);
                 img{
                     width: 100%;
                 }
@@ -44,7 +55,8 @@
                     display: grid;
                     grid-template-columns: 16px auto 16px;
                     grid-template-areas: ". new-content .";
-                    background: goldenrod;
+                    padding: 24px 0;
+                    
                     >div{
                        
                         grid-area: new-content;

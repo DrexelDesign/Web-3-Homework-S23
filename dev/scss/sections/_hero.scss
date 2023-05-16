@@ -3,6 +3,22 @@
 ============= */
 #hero{
 
+    #hero-img{
+        background-image: url("../img/hero/hero.jpg");
+        background-size: cover;
+        height: 50vh;
+        background-position: 0% center;
+
+        @include lg{
+            height: 70vh;
+            background-position: 0% 90%;
+        }
+
+        @include xl{
+            height: 80vh;
+        }
+    }
+
     #hero-container{
         // this is for the 40 60 split below the hero image
         @include md{

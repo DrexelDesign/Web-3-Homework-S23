@@ -45,6 +45,16 @@ footer{
 
             h1{
                 margin-bottom: 16px;
+                font-size: rem-calc(20);
+                font-weight: 600;
+                color: var(--blue);
+            }
+
+            h2{
+                font-size: rem-calc(16);
+                font-weight: 600;
+                margin-bottom: 8px;
+                color: var(--blue);
             }
 
             .f1-content{
@@ -58,15 +68,39 @@ footer{
                     margin-right: 8px;
                 }
             }
+
+            a:link, a:visited{
+                color: white;
+                transition: 0.25s;
+
+                &:hover, &:active{
+                    color: var(--yellow);
+                }
+            }
+
+            .divide-line{
+                height: 1px;
+                width: 100%;
+                background-color: var(--blue);
+                margin: 32px 0;
+            }
         }
 
         #f2{
+            margin-top: 48px;
             @include md{
                 grid-area: f2;
             }
 
+            @include md{
+                margin-top: 0px;
+            }
+
             h1{
                 margin-bottom: 16px;
+                font-size: rem-calc(20);
+                font-weight: 600;
+                color: var(--blue);
             }
 
             form{
@@ -82,7 +116,8 @@ footer{
                     border-radius: 0;
                 }
                 div{
-                    // text-align: right;
+                    display: flex;
+                    justify-content: flex-end;
                     button{
                         border: none;
                         color: var(--blueDark);
@@ -95,21 +130,27 @@ footer{
         #f3{
             @include md{
                 grid-area: f3;
-                margin-top: -65px;
+                margin-top: -145px;
             }
 
             @include lg{
                 margin-top: 0;
             }
 
+            @include xl{
+                text-align: right;
+            }
+
             h1{
                 margin-bottom: 16px;
+                font-size: rem-calc(20);
+                font-weight: 600;
+                color: var(--blue);
             }
 
 
             ul{
                 display: flex;
-
 
                 @include lg{
                     justify-content: flex-end;
@@ -118,9 +159,18 @@ footer{
 
                 li{
                     margin-right: 16px;
-                    a{
-                        color: white;
-                        font-size: rem-calc(20);
+                    a:link, a:visited{
+                        color: var(--white);
+                        font-size: rem-calc(25);
+
+                        &:hover, &:active{
+                            color: var(--yellow);
+                        }
+                    }
+
+                    @include xl{
+                        margin-right: 0;
+                        margin-left: 16px;
                     }
                 }
             }

@@ -31,6 +31,8 @@
             @include md{
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
+
+                grid-template-rows: repeat(3,440px);
                 grid-template-areas: 
                 "n1 n1 n2 n2"
                 "n3 n3 n4 n4"
@@ -39,6 +41,9 @@
 
             @include lg{
                 grid-template-columns: repeat(6, 1fr);
+
+                grid-template-rows: repeat(2,440px);
+                
                 grid-template-areas: 
                 "n1 n1 n2 n2 n3 n3"
                 ".. n4 n4 n5 n5 ..";
@@ -48,47 +53,88 @@
             li{
                 background-color: var(--grayLight);
                 box-shadow: 0px 1px 1px rgba(42, 48, 54, 0.3);
-                img{
-                    width: 100%;
+               
+      
+                .new-img{
+                    background-position: center;
+                    background-size: cover;
+                     height: 40vh;
+
+                     @include md{
+                        height: 40%;
+                     }
                 }
+
                 section{
                     display: grid;
                     grid-template-columns: 16px auto 16px;
                     grid-template-areas: ". new-content .";
                     padding: 24px 0;
+
+                    @include md{
+                        padding: 24px 0 0;
+                    }
                     
-                    >div{
-                       
+                    .new-grid-item{
                         grid-area: new-content;
+
+                        @include md{
+                            display: flex;
+                            flex-direction: column;
+                            border: 1px solid red;
+
+                        }
+
+                        a{
+                            margin-top: auto;
+                        }
                     }
                 }
             }
     
             #n1{
+                
+                .new-img{
+                    background-image: url("../img/new/new-1.jpg");
+                }
+
                 @include md{
                     grid-area: n1;
                 }
             }
     
             #n2{
+                
+                .new-img{
+                    background-image: url("../img/new/new-2.jpg");
+                }
                 @include md{
                     grid-area: n2;
                 }
             }
     
             #n3{
+                .new-img{
+                    background-image: url("../img/new/new-3.jpg");
+                }
                 @include md{
                     grid-area: n3;
                 }
             }
     
             #n4{
+                .new-img{
+                    background-image: url("../img/new/new-4.jpg");
+                }
                 @include md{
                     grid-area: n4;
                 }
             }
     
             #n5{
+                .new-img{
+                    background-image: url("../img/new/new-5.jpg");
+                }
                 @include md{
                     grid-area: n5;
                 }

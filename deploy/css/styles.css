@@ -381,6 +381,10 @@ ul li {
 /* =============
     Typography
 ============= */
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
 h1, h2, h3, h4, h5, p {
   margin: 0;
   padding: 0;
@@ -412,6 +416,19 @@ input[type=email],
 input[type=password],
 textarea {
   -webkit-appearance: none;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--blueDark);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: var(--blueDark);
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: var(--blueDark);
 }
 
 /* =============
@@ -459,12 +476,33 @@ header #form-content > div form input {
   width: 100%;
   border-radius: 0;
   margin-right: 8px;
+  font-size: 0.875rem;
+  color: var(--blueDark);
+}
+@media (min-width: 768px) {
+  header #form-content > div form input {
+    font-size: 1.875rem;
+    font-weight: 300;
+  }
+}
+@media (min-width: 1200px) {
+  header #form-content > div form input {
+    font-size: 2.1875rem;
+  }
 }
 header #form-content > div form button {
   border: none;
   background-color: var(--red);
   border-radius: 5px;
   padding: 10px 16px;
+  color: var(--white);
+  cursor: pointer;
+  transition: 0.25s;
+  font-size: 1.875rem;
+}
+header #form-content > div form button:hover {
+  background-color: var(--redDark);
+  color: var(--blueDark);
 }
 
 /* =============

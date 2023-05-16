@@ -4,9 +4,24 @@
 
 #hero{
 
-    img{
-        font-size: 0;
-        display: block;
+    #hero-img{
+        background-image: url("../img/hero/hero.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 40vh;
+
+        @include md{
+            height: 50vh;
+        }
+
+        @include xl{
+            background-position: center 80%;
+            height: 65vh;
+        }
+
+        @include xxl{
+            height: 70vh;
+        }
     }
 
     #hero-bottom{
@@ -35,8 +50,14 @@
                 aside{
                     margin-left: auto;
 
-                    a{
+                    a:link, a:visited{
                         display: flex;
+                        color: white;
+                        transition: 0.25s;
+
+                        &:hover, &:active{
+                            color: var(--blueDark);
+                        }
                     }
                 }
             }
@@ -45,14 +66,40 @@
         #hero-bottom-left{
             background-color: var(--redDark);
             @include xxl{
-                grid-template-columns: 20% auto 16px;
+                grid-template-columns: 30% auto 16px;
+            }
+
+            h1{
+                font-size: rme-calc(18);
+                margin-bottom: 8px;
+
+                @include xl{
+                    font-size: rme-calc(25);
+                }
+            }
+
+            p{
+                font-weight: 600;
+                font-size: rme-calc(14);
+
+                @include xl{
+                    font-size: rme-calc(18);
+                }
             }
         }
 
         #hero-bottom-right{
             background-color: var(--red);
             @include xxl{
-                grid-template-columns: 16px auto 20%;
+                grid-template-columns: 16px auto 30%;
+            }
+
+            h3{
+                font-weight: 400;
+                font-size: rem-calc(16);
+                span{
+                    font-weight: 700;
+                }
             }
         }
     }

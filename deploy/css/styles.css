@@ -434,6 +434,10 @@ textarea {
 /* =============
     Navigation
 ============= */
+a {
+  text-decoration: none;
+}
+
 /* =============
     Header
 ============= */
@@ -606,9 +610,27 @@ footer > div #f3 ul li a {
 /* =============
     Hero
 ============= */
-#hero img {
-  font-size: 0;
-  display: block;
+#hero #hero-img {
+  background-image: url("../img/hero/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 40vh;
+}
+@media (min-width: 768px) {
+  #hero #hero-img {
+    height: 50vh;
+  }
+}
+@media (min-width: 1200px) {
+  #hero #hero-img {
+    background-position: center 80%;
+    height: 65vh;
+  }
+}
+@media (min-width: 1440px) {
+  #hero #hero-img {
+    height: 70vh;
+  }
 }
 @media (min-width: 768px) {
   #hero #hero-bottom {
@@ -636,15 +658,38 @@ footer > div #f3 ul li a {
 #hero #hero-bottom .hero-bottom-card > div aside {
   margin-left: auto;
 }
-#hero #hero-bottom .hero-bottom-card > div aside a {
+#hero #hero-bottom .hero-bottom-card > div aside a:link, #hero #hero-bottom .hero-bottom-card > div aside a:visited {
   display: flex;
+  color: white;
+  transition: 0.25s;
+}
+#hero #hero-bottom .hero-bottom-card > div aside a:link:hover, #hero #hero-bottom .hero-bottom-card > div aside a:link:active, #hero #hero-bottom .hero-bottom-card > div aside a:visited:hover, #hero #hero-bottom .hero-bottom-card > div aside a:visited:active {
+  color: var(--blueDark);
 }
 #hero #hero-bottom #hero-bottom-left {
   background-color: var(--redDark);
 }
 @media (min-width: 1440px) {
   #hero #hero-bottom #hero-bottom-left {
-    grid-template-columns: 20% auto 16px;
+    grid-template-columns: 30% auto 16px;
+  }
+}
+#hero #hero-bottom #hero-bottom-left h1 {
+  font-size: rme-calc(18);
+  margin-bottom: 8px;
+}
+@media (min-width: 1200px) {
+  #hero #hero-bottom #hero-bottom-left h1 {
+    font-size: rme-calc(25);
+  }
+}
+#hero #hero-bottom #hero-bottom-left p {
+  font-weight: 600;
+  font-size: rme-calc(14);
+}
+@media (min-width: 1200px) {
+  #hero #hero-bottom #hero-bottom-left p {
+    font-size: rme-calc(18);
   }
 }
 #hero #hero-bottom #hero-bottom-right {
@@ -652,8 +697,15 @@ footer > div #f3 ul li a {
 }
 @media (min-width: 1440px) {
   #hero #hero-bottom #hero-bottom-right {
-    grid-template-columns: 16px auto 20%;
+    grid-template-columns: 16px auto 30%;
   }
+}
+#hero #hero-bottom #hero-bottom-right h3 {
+  font-weight: 400;
+  font-size: 1rem;
+}
+#hero #hero-bottom #hero-bottom-right h3 span {
+  font-weight: 700;
 }
 
 /* =============

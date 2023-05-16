@@ -20,7 +20,6 @@
     }
 
     #hero-container{
-        // this is for the 40 60 split below the hero image
         @include md{
             display: grid;
             grid-template-columns: 40% auto;
@@ -30,46 +29,27 @@
             grid-template-columns: 50% auto;
         }
 
-        aside{
-            padding: 16px 0;
-            
-            .hero-content-container{
-                grid-area: hero-aside;
+        .hero-content-container{
+            padding: 16px;
+            display: flex;
+            h1{
+                font-size: rem-calc(20);
+            }
+
+            .hero-links{
+                margin-left: auto;
                 display: flex;
-                padding: 16px;
-                height: 100%;
-                box-sizing: border-box;
-                
-
-                h1{
-                    font-size: rem-calc(20);
-                }
-
-                section{
-                    height: 100%;
-                }
-
-                .hero-links{
-                    margin-left: auto;
-                    display: flex;
-                    align-items: center;
-                    height: 100%;
-                    box-sizing: border-box;
-                
-
-                    a{
-                        color: var(--blueDark);
-                        // height: 100%;
-
-                        @include lg{
-                            display: flex !important;
-                        }
-
-                        i{
-                            margin-left: 8px;
-                        }
+                align-items: center;
+            
+                a{
+                    color: var(--blueDark);
+                    @include lg{
+                        display: flex !important;
                     }
-                    
+
+                    i{
+                        margin-left: 8px;
+                    }
                 }
             }
         }
@@ -109,7 +89,6 @@
             }
         }
     }
-    
 }
 
 #hero-sub{
@@ -159,8 +138,7 @@
                 display: inline-block;
             }
 
-            
-
+    
             aside{
                 width: 30%;
                 // width: 100%;

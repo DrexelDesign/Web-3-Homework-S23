@@ -163,7 +163,12 @@
 
             aside{
                 width: 30%;
+                // width: 100%;
                 margin-left: auto;
+
+                @include sm{
+                    width: 20%;
+                }
 
                 @include xl{
                     width: 20%;
@@ -174,19 +179,20 @@
                     width: 100%;
                     padding-bottom: 100%;
                     border-radius: 100%;
+                    border: 4px solid white;
                 }
             }
 
             #sub-right{
                 div{
-                    background-image: url("../img/hero/parts.jpg");
+                    background-image: url("../img/hero/hero.jpg");
                 }
                 
             }
 
             #sub-left{
                 div{
-                    background-image: url("../img/hero/planning.jpg");
+                    background-image: url("../img/hero/hero.jpg");
                 }
                 
             }

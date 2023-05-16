@@ -857,6 +857,11 @@ footer > div #f3 ul li a:link:hover, footer > div #f3 ul li a:link:active, foote
   width: 30%;
   margin-left: auto;
 }
+@media (min-width: 576px) {
+  #hero-sub > div .hero-sub-card aside {
+    width: 20%;
+  }
+}
 @media (min-width: 1200px) {
   #hero-sub > div .hero-sub-card aside {
     width: 20%;
@@ -868,12 +873,13 @@ footer > div #f3 ul li a:link:hover, footer > div #f3 ul li a:link:active, foote
   width: 100%;
   padding-bottom: 100%;
   border-radius: 100%;
+  border: 4px solid white;
 }
 #hero-sub > div .hero-sub-card #sub-right div {
-  background-image: url("../img/hero/parts.jpg");
+  background-image: url("../img/hero/hero.jpg");
 }
 #hero-sub > div .hero-sub-card #sub-left div {
-  background-image: url("../img/hero/planning.jpg");
+  background-image: url("../img/hero/hero.jpg");
 }
 
 @media (min-width: 1024px) {

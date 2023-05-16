@@ -39,7 +39,32 @@ footer{
 
             h1{
                 color: white;
+                font-size: rem-calc(20);
+                font-weight: 600;
+                margin-bottom: 16px;
             }
+
+            h2{
+                font-size: rem-calc(16);
+                font-weight: 600;
+                margin-bottom: 8px;
+            }
+
+            .divide-line{
+                height: 1px;
+                background-color: white;
+                width: 100%;
+                margin: 16px 0;
+            }
+
+            // li{
+            //     padding-bottom: 16px;
+            //     border-bottom: 1px solid white;
+            // }
+
+            // li:last-child{
+            //     border: none;
+            // }
 
             section{
                 display: flex;
@@ -49,12 +74,32 @@ footer{
                     font-size: rem-calc(20);
                     margin-right: 16px;
                 }
+
+            }
+
+            a:link, a:visited{
+                color: var(--blueInput);
+                &:hover, &:active{
+                    color: var(--white);
+                }
             }
         }   
 
         #f2{
             @include md{
                 grid-area: f2;
+            }
+
+            h1{
+                color: white;
+                font-size: rem-calc(20);
+                font-weight: 600;
+                margin-top: 32px;
+                margin-bottom: 16px;
+
+                @include md{
+                    margin-top: 0;
+                }
             }
 
             form{
@@ -89,6 +134,18 @@ footer{
                 text-align: right;
             }
 
+            h1{
+                color: white;
+                font-size: rem-calc(20);
+                font-weight: 600;
+                margin-top: 32px;
+                margin-bottom: 16px;
+
+                @include md{
+                    margin-top: 0;
+                }
+            }
+
             ul{
                 display: flex;
                 @include lg{
@@ -97,9 +154,19 @@ footer{
                 }
                 li{
                     margin-right: 16px;
-                    a{
+
+                    @include xl{
+                        margin: 0 0 0 16px;
+                    }
+
+                    a:link, a:visited{
                         color: white;
                         font-size: rem-calc(30);
+                        transition: 0.25s;
+
+                        &:hover, &:active{
+                            color: var(--blueInput);
+                        }
                     }
                 }
             }

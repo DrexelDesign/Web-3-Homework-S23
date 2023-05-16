@@ -393,11 +393,27 @@ h1, h2, h3, h4, h5, p {
 /* =============
     Buttons
 ============= */
+.red-link:link, .red-link:visited {
+  background-color: var(--red);
+  color: white;
+  padding: 8px 16px;
+  display: inline-block;
+  transition: 0.25s;
+}
+.red-link:link:hover, .red-link:visited:hover {
+  background-color: var(--redDark);
+}
+
 .red-button {
   background-color: var(--red);
   color: white;
   padding: 8px 16px;
   display: inline-block;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.red-button:hover {
+  background-color: var(--redDark);
 }
 
 /* =============
@@ -552,6 +568,20 @@ footer > div #f1 {
 }
 footer > div #f1 h1 {
   color: white;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+footer > div #f1 h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+footer > div #f1 .divide-line {
+  height: 1px;
+  background-color: white;
+  width: 100%;
+  margin: 16px 0;
 }
 footer > div #f1 section {
   display: flex;
@@ -561,9 +591,27 @@ footer > div #f1 section i {
   font-size: 1.25rem;
   margin-right: 16px;
 }
+footer > div #f1 a:link, footer > div #f1 a:visited {
+  color: var(--blueInput);
+}
+footer > div #f1 a:link:hover, footer > div #f1 a:link:active, footer > div #f1 a:visited:hover, footer > div #f1 a:visited:active {
+  color: var(--white);
+}
 @media (min-width: 768px) {
   footer > div #f2 {
     grid-area: f2;
+  }
+}
+footer > div #f2 h1 {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+@media (min-width: 768px) {
+  footer > div #f2 h1 {
+    margin-top: 0;
   }
 }
 footer > div #f2 form input {
@@ -591,6 +639,18 @@ footer > div #f2 form div button {
     text-align: right;
   }
 }
+footer > div #f3 h1 {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+@media (min-width: 768px) {
+  footer > div #f3 h1 {
+    margin-top: 0;
+  }
+}
 footer > div #f3 ul {
   display: flex;
 }
@@ -602,9 +662,18 @@ footer > div #f3 ul {
 footer > div #f3 ul li {
   margin-right: 16px;
 }
-footer > div #f3 ul li a {
+@media (min-width: 1200px) {
+  footer > div #f3 ul li {
+    margin: 0 0 0 16px;
+  }
+}
+footer > div #f3 ul li a:link, footer > div #f3 ul li a:visited {
   color: white;
   font-size: 1.875rem;
+  transition: 0.25s;
+}
+footer > div #f3 ul li a:link:hover, footer > div #f3 ul li a:link:active, footer > div #f3 ul li a:visited:hover, footer > div #f3 ul li a:visited:active {
+  color: var(--blueInput);
 }
 
 /* =============
@@ -741,11 +810,46 @@ footer > div #f3 ul li a {
   align-items: center;
   box-shadow: 0px 1px 1px rgba(42, 48, 54, 0.296793);
 }
+#sub-hero > div .sub-hero-card h1 {
+  font-size: 1.375rem;
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  #sub-hero > div .sub-hero-card h1 {
+    font-size: 1.875rem;
+  }
+}
 #sub-hero > div .sub-hero-card a {
   margin-top: 8px;
 }
 #sub-hero > div .sub-hero-card aside {
   margin-left: auto;
+  width: 35%;
+}
+@media (min-width: 576px) {
+  #sub-hero > div .sub-hero-card aside {
+    width: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  #sub-hero > div .sub-hero-card aside {
+    width: 20%;
+  }
+}
+#sub-hero > div .sub-hero-card aside > div {
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  padding-bottom: 100%;
+  border-radius: 100%;
+  border: 3px solid white;
+  overflow: hidden;
+}
+#sub-hero > div .sub-hero-card aside #sub-left-img {
+  background-image: url("../img/subHero/planning.jpg");
+}
+#sub-hero > div .sub-hero-card aside #sub-right-img {
+  background-image: url("../img/subHero/tickets.jpg");
 }
 
 /* =============
@@ -763,11 +867,15 @@ footer > div #f3 ul li a {
     grid-template-columns: auto 1200px auto;
   }
 }
+#gallery ul {
+  display: grid;
+  grid-template-rows: 50vh 76vh;
+}
 @media (min-width: 768px) {
   #gallery ul {
     grid-area: gallery;
-    display: grid;
     grid-template-columns: 50% auto;
+    grid-template-rows: 50vh;
   }
 }
 @media (min-width: 1024px) {
@@ -777,21 +885,38 @@ footer > div #f3 ul li a {
 }
 @media (min-width: 1440px) {
   #gallery ul {
+    grid-template-rows: repeat(2, 30vh);
     grid-template-areas: "g1 g2" "g1 g3";
   }
+}
+#gallery ul li {
+  background-size: cover;
+  background-position: center;
+}
+#gallery ul #g1 {
+  background-image: url("../img/gallery/gallery-1.jpg");
 }
 @media (min-width: 1440px) {
   #gallery ul #g1 {
     grid-area: g1;
   }
 }
+#gallery ul #g2 {
+  background-image: url("../img/gallery/gallery-2.jpg");
+}
 @media (min-width: 1440px) {
   #gallery ul #g2 {
     grid-area: g2;
+    background-position: center bottom;
   }
+}
+#gallery ul #g3 {
+  display: none;
+  background-image: url("../img/gallery/gallery-3.jpg");
 }
 @media (min-width: 1440px) {
   #gallery ul #g3 {
+    display: list-item;
     grid-area: g3;
   }
 }

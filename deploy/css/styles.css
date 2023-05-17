@@ -958,41 +958,88 @@ footer > div #f3 ul li a:link:hover, footer > div #f3 ul li a:link:active, foote
     grid-area: nt;
   }
 }
-#new > div section img {
-  width: 100%;
-  font-size: 0;
-  display: block;
-}
-#new > div section .card-data {
-  display: grid;
-  grid-template-columns: 16px auto 16px;
-  grid-template-areas: ". card-data .";
+#new > div .card-container {
   background-color: var(--blueLight);
-  padding: 16px 0;
   box-shadow: 0px 1px 1px rgba(42, 48, 54, 0.3);
+  display: grid;
+  gap: 0;
+  grid-template-rows: 30vh auto;
 }
-#new > div section .card-data > div {
-  grid-area: card-data;
+@media (min-width: 768px) {
+  #new > div .card-container {
+    grid-template-rows: 20vh auto;
+  }
+}
+#new > div .card-container .new-img {
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+}
+#new > div .card-container .card-data {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 16px;
+}
+@media (min-width: 768px) {
+  #new > div .card-container .card-data {
+    position: relative;
+  }
+}
+#new > div .card-container .card-data h1 {
+  font-size: 1.6875rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+#new > div .card-container .card-data p {
+  padding-bottom: 50px;
+  line-height: 20px;
+}
+@media (min-width: 768px) {
+  #new > div .card-container .card-data p {
+    padding-bottom: 75px;
+  }
+}
+@media (min-width: 768px) {
+  #new > div .card-container .card-data a {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+  }
+}
+#new > div #n1 .new-img {
+  background-image: url("../img/new/new-1.jpg");
 }
 @media (min-width: 768px) {
   #new > div #n1 {
     grid-area: n1;
   }
 }
+#new > div #n2 .new-img {
+  background-image: url("../img/new/new-2.jpg");
+}
 @media (min-width: 768px) {
   #new > div #n2 {
     grid-area: n2;
   }
+}
+#new > div #n3 .new-img {
+  background-image: url("../img/new/new-3.jpg");
 }
 @media (min-width: 768px) {
   #new > div #n3 {
     grid-area: n3;
   }
 }
+#new > div #n4 .new-img {
+  background-image: url("../img/new/new-4.jpg");
+}
 @media (min-width: 768px) {
   #new > div #n4 {
     grid-area: n4;
   }
+}
+#new > div #n5 .new-img {
+  background-image: url("../img/new/new-5.jpg");
 }
 @media (min-width: 768px) {
   #new > div #n5 {

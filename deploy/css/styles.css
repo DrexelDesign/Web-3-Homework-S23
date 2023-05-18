@@ -334,6 +334,10 @@ template {
 /* =============
     Base
 ============= */
+body {
+  position: relative;
+}
+
 ul {
   margin: 0;
   padding: 0;
@@ -473,6 +477,8 @@ header #form-content {
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". search .";
   padding: 16px 0;
+  position: sticky;
+  top: 100px;
 }
 @media (min-width: 768px) {
   header #form-content {
@@ -1002,6 +1008,7 @@ footer > div #f3 ul li a:link:hover, footer > div #f3 ul li a:link:active, foote
 @media (min-width: 768px) {
   #new > div .card-container .card-data a {
     position: absolute;
+    z-index: 10000;
     bottom: 16px;
     left: 16px;
   }

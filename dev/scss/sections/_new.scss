@@ -84,6 +84,7 @@
                    
                     @include md {
                         position: absolute;
+						z-index: 10000;
                         bottom: 16px;
                         left: 16px;
                     }

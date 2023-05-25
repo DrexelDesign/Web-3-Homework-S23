@@ -3,6 +3,12 @@
 ============= */
 #hero{
 
+    margin-top: 185px;
+
+    @include xl{
+        margin-top: 240px;
+    }
+
     #hero-img{
         background-image: url("../img/hero/hero.jpg");
         background-size: cover;
@@ -92,6 +98,10 @@
 }
 
 #hero-sub{
+
+    // this is the offset magic
+    scroll-margin-top: var(--offset);
+    //  
 
     @include md{
         // this grid controls the 2 cards that are 50% 50%

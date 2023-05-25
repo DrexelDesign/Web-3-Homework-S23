@@ -1,7 +1,55 @@
 /* =============
     Navigation
 ============= */
+html{
+    scroll-behavior: smooth;
+}
 
 a:link, a:visited{
     text-decoration:  none;
+}
+
+.show-menu{
+    display: block !important;
+}
+
+
+#main-menu{
+    display: none;
+
+    @include xl{
+        display: block;
+    }
+    ul{
+        padding: 16px;
+        text-align: right;
+
+        @include xl{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        li{
+
+            @include xl{
+                margin-left: 32px;
+            }
+            a:link, a:visited{
+                color: white;
+                font-size: rem-calc(30);
+                padding: 15px 0;
+                display: inline-block;
+                transition: 0.25s;
+
+                @include xl{
+                    font-size: rem-calc(25);
+                    font-weight: 400;
+                }
+
+                &:hover, &:active{
+                    color: var(--yellow)
+                }
+            }
+        }
+    }
 }

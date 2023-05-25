@@ -1,5 +1,9 @@
 #gallery{
 
+    // this is the offset magic
+    scroll-margin-top: var(--offset);
+    //  
+
     @include lg{
         display: grid;
         grid-template-columns: 16px auto 16px;

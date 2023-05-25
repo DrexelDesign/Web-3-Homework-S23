@@ -2,18 +2,52 @@
     Header
 ============= */
 header {
-	#logo-nav {
-		display: grid;
-		grid-template-columns: 16px auto 16px;
-		grid-template-areas: ". logo-nav .";
-		background-color: var(--blueDark);
-		padding: 16px 0 24px;
+	position: fixed;
+	width: 100%;
+	top:0;
+	left: 0;
+	z-index: 500;
 
-		> div {
-			grid-area: logo-nav;
-			img {
+	#header-top{
+			background-color: var(--blueDark);
+			padding: 16px 0 24px;
+			display: grid;
+			grid-template-columns: 50% auto;
+			grid-template-areas: 
+			"logo burger"
+			"nav nav";
+
+			@include xl {
+				grid-template-columns: 20% auto;
+				grid-template-areas: "logo nav"
 			}
-		}
+
+			#logo-container{
+				padding-left: 16px;
+				grid-area: logo;
+			}
+
+			#burger-container{
+				grid-area: burger;
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+
+				@include xl {
+					display: none;
+				}
+				button{
+					color: white;
+					background-color: transparent;
+					border: none;
+					font-size: rem-calc(20);
+				}
+			}
+
+			#main-menu{
+				grid-area: nav;
+				// see navigation scss file for css
+			}
 	}
 
 	#search {
@@ -22,6 +56,7 @@ header {
 		grid-template-areas: ". search .";
 		background-color: var(--grayLight);
 		padding: 16px 0;
+		box-shadow: 0px 1px 1px rgba(42, 48, 54, 0.3);
 
 		@include md {
 			padding: 24px 0;

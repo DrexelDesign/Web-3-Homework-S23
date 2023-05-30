@@ -3,6 +3,11 @@
 ============= */
 
 #gallery{
+
+    // this is the offset magic
+    scroll-margin-top: var(--offset);
+    //  
+    
      
     @include lg{
         display: grid;

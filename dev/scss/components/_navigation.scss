@@ -1,7 +1,60 @@
 /* =============
     Navigation
 ============= */
+html{
+    scroll-behavior: smooth;
+}
 
 a{
     text-decoration: none;
+}
+
+.show-menu{
+    display: block !important;
+}
+
+
+nav{
+    display: none;
+    margin-top: 32px;
+
+    @include lg{
+        display: block;
+        margin-top: 0px;
+    }
+
+    ul{
+        text-align: right;
+        height: 100%;
+
+        @include lg{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        li{
+
+            @include lg{
+                margin-left: 24px;
+            }
+
+            a:link, a:visited{
+                color: var(--white);
+                font-size: rem-calc(30);
+                padding: 16px 0;
+                transition: 0.25s;
+                display: inline-block;
+
+                @include lg{
+                    font-weight: 300;
+                    font-size: rem-calc(25);
+                }
+
+                &:hover, &:active{
+                    color: var(--red);
+                }
+            }
+        }
+    }
 }

@@ -33,6 +33,11 @@ $screen-xxl-min: 1440px;
   --redDark: #C04D32;
   --red: #EE6C4D;
 
+  --offset: 170px;
+
+  @include lg{
+    --offset: 190px;
+  }
 
 }
 

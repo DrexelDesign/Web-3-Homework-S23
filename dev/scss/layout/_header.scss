@@ -3,29 +3,83 @@
 ============= */
 header{
 
-    #logo-nav{
-        display: grid;
-        grid-template-columns: 16px auto 16px;
-        grid-template-areas: ". logo-nav .";
-        background-color: var(--blueDark);
-        color: var(--blueLight);
-        padding: 16px 0 24px;
+	position: fixed;
+	width: 100%;
+	top:0;
+	left: 0;
+	z-index: 500;
 
-        >div{
-            
-            grid-area: logo-nav;
-        }
-        
+    #logo-nav{
+		background-color: var(--blueDark);
+        color: var(--blueLight);
+		display: grid;
+		grid-template-columns:  70% auto;
+		grid-template-areas: 
+		"logo burger"
+		"nav nav";
+		padding: 24px 16px;
+
+		@include lg{
+			grid-template-columns:  20% auto;
+			grid-template-areas: 
+			"logo nav";
+		}
+
+
+		#logo-container{
+			grid-area: logo;
+			display: flex;
+			align-items: center;
+
+			img{
+				width: 40px;
+				margin-right: 8px;
+			}
+
+			div{
+				h1{
+					font-weight: 600;
+					font-size: rem-calc(16);
+				}
+				h3{
+					font-weight: 400;
+					font-size: rem-calc(14);
+				}
+			}
+		}
+
+		#burger-container{
+			grid-area: burger;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+
+			@include lg{
+				display: none;
+			}
+
+			button{
+				border: none;
+				background-color: transparent;
+				color: var(--white);
+				font-size: rem-calc(30);
+				margin: 0;
+				padding: 0;
+			}
+		}
+
+		nav{
+			grid-area: nav;
+		}
     }
 
     #form-content{
+		background-color: var(--white);
         display: grid;
         grid-template-columns: 16px auto 16px;
         grid-template-areas: ". search .";
         padding: 16px 0;
-
-        position: sticky;
-        top: 100px;
+		box-shadow: 0px 1px 1px rgba(42, 48, 54, 0.3);
 
         @include md{
             padding: 24px 0;
@@ -46,10 +100,10 @@ header{
                      border: none;
                      border-bottom: 1px solid var(--blueInput);
                     width: 100%;
-                    border-radius: 0;
-                     margin-right: 8px;
-                     font-size: rem-calc(14);
-                     color: var(--blueDark);
+                    border-radius: 0 !important;
+                    margin-right: 8px;
+                    font-size: rem-calc(14);
+                    color: var(--blueDark);
 
                      @include md{
                         font-size: rem-calc(30);

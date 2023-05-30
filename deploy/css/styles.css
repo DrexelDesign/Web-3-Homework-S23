@@ -20,6 +20,12 @@ html {
   --yellowDark: #E2BA06;
   --grayLight: #F8F9FA;
   --gray: #E0DFD5;
+  --offset: 200px;
+}
+@media (min-width: 1024px) {
+  :root {
+    --offset: 260px;
+  }
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -402,6 +408,10 @@ h1, h2, h3, h4, h5, p {
 /* =============
     Buttons
 ============= */
+button {
+  cursor: pointer;
+}
+
 .yellow-link:link, .yellow-link:visited {
   background-color: var(--yellow);
   padding: 12px 16px;
@@ -464,22 +474,109 @@ textarea {
 /* =============
     Navigation
 ============= */
+html {
+  scroll-behavior: smooth;
+}
+
 a:link, a:visited {
   text-decoration: none;
+}
+
+.show-menu {
+  display: block !important;
+}
+
+nav {
+  text-align: right;
+  padding-top: 48px;
+  display: none;
+}
+@media (min-width: 1024px) {
+  nav {
+    display: block;
+    padding-top: 0px;
+  }
+}
+@media (min-width: 1024px) {
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+  }
+}
+nav ul li {
+  margin-bottom: 24px;
+}
+@media (min-width: 1024px) {
+  nav ul li {
+    margin-bottom: 0;
+  }
+}
+nav ul li a:link, nav ul li a:visited {
+  color: var(--white);
+  font-size: 1.875rem;
+  padding: 24px 0;
+  transition: 0.25s;
+}
+@media (min-width: 1024px) {
+  nav ul li a:link, nav ul li a:visited {
+    padding: 0px 0px 0px 24px;
+    font-size: 1.5625rem;
+    font-weight: 300;
+  }
+}
+nav ul li a:link:hover, nav ul li a:link:active, nav ul li a:visited:hover, nav ul li a:visited:active {
+  color: var(--yellow);
 }
 
 /* =============
     Header
 ============= */
-header #logo-nav {
-  display: grid;
-  grid-template-columns: 16px auto 16px;
-  grid-template-areas: ". logo-nav .";
-  background-color: var(--blueDark);
-  padding: 16px 0 24px;
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 500;
 }
-header #logo-nav > div {
-  grid-area: logo-nav;
+header #logo-nav {
+  background-color: var(--blueDark);
+  padding: 24px 16px;
+  display: grid;
+  grid-template-columns: 50% auto;
+  grid-template-areas: "logo burger" "nav nav";
+}
+@media (min-width: 1024px) {
+  header #logo-nav {
+    grid-template-areas: "logo nav";
+  }
+}
+header #logo-nav #logo-container {
+  grid-area: logo;
+}
+header #logo-nav #burger-container {
+  grid-area: burger;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  header #logo-nav #burger-container {
+    display: none;
+  }
+}
+header #logo-nav #burger-container button {
+  border: none;
+  background-color: transparent;
+  color: var(--white);
+  font-size: 1.5625rem;
+  margin: 0;
+  padding: 0;
+}
+header #logo-nav nav {
+  grid-area: nav;
 }
 header #search {
   display: grid;
@@ -487,6 +584,7 @@ header #search {
   grid-template-areas: ". search .";
   background-color: var(--grayLight);
   padding: 16px 0;
+  box-shadow: 0px 1px 1px rgba(42, 48, 54, 0.296793);
 }
 @media (min-width: 768px) {
   header #search {
@@ -509,7 +607,7 @@ header #search > div form input {
   width: 100%;
   border: none;
   border-bottom: 1px solid var(--blueLight);
-  border-radius: 0;
+  border-radius: 0 !important;
   background-color: transparent;
   margin-right: 8px;
 }
@@ -751,6 +849,7 @@ footer > div #f3 ul li a:link:hover, footer > div #f3 ul li a:link:active, foote
 }
 #hero #hero-container .hero-content-container .hero-links a {
   color: var(--blueDark);
+  transition: 0.25s;
 }
 @media (min-width: 1024px) {
   #hero #hero-container .hero-content-container .hero-links a {
@@ -759,6 +858,9 @@ footer > div #f3 ul li a:link:hover, footer > div #f3 ul li a:link:active, foote
 }
 #hero #hero-container .hero-content-container .hero-links a i {
   margin-left: 8px;
+}
+#hero #hero-container .hero-content-container .hero-links a:hover, #hero #hero-container .hero-content-container .hero-links a:active {
+  color: var(--white);
 }
 #hero #hero-container #hero-left {
   background: var(--yellowDark);
@@ -795,6 +897,9 @@ footer > div #f3 ul li a:link:hover, footer > div #f3 ul li a:link:active, foote
   font-weight: 600;
 }
 
+#hero-sub {
+  scroll-margin-top: var(--offset);
+}
 @media (min-width: 768px) {
   #hero-sub {
     display: grid;
@@ -838,9 +943,13 @@ footer > div #f3 ul li a:link:hover, footer > div #f3 ul li a:link:active, foote
     font-size: 2rem;
   }
 }
-#hero-sub > div .hero-sub-card a {
+#hero-sub > div .hero-sub-card a:link, #hero-sub > div .hero-sub-card a:visited {
   margin-top: 10px;
   display: inline-block;
+  transition: 0.25s;
+}
+#hero-sub > div .hero-sub-card a:link:hover, #hero-sub > div .hero-sub-card a:link:active, #hero-sub > div .hero-sub-card a:visited:hover, #hero-sub > div .hero-sub-card a:visited:active {
+  color: var(--white);
 }
 #hero-sub > div .hero-sub-card aside {
   width: 30%;
@@ -871,6 +980,9 @@ footer > div #f3 ul li a:link:hover, footer > div #f3 ul li a:link:active, foote
   background-image: url("../img/hero/hero.jpg");
 }
 
+#gallery {
+  scroll-margin-top: var(--offset);
+}
 @media (min-width: 1024px) {
   #gallery {
     display: grid;
@@ -942,6 +1054,9 @@ footer > div #f3 ul li a:link:hover, footer > div #f3 ul li a:link:active, foote
 /* =============
     New
 ============= */
+#new {
+  scroll-margin-top: var(--offset);
+}
 @media (min-width: 768px) {
   #new {
     display: grid;
@@ -961,6 +1076,7 @@ footer > div #f3 ul li a:link:hover, footer > div #f3 ul li a:link:active, foote
 }
 #new > div h1 {
   margin-bottom: 16px;
+  padding-left: 16px;
 }
 @media (min-width: 768px) {
   #new > div h1 {

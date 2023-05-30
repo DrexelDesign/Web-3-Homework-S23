@@ -34,5 +34,10 @@ $screen-xxl-min: 1440px;
 
   --grayLight: #F8F9FA;
   --gray: #E0DFD5;
+
+  --offset: 200px;
+  @include lg{
+    --offset: 260px;
+  }
 }
 

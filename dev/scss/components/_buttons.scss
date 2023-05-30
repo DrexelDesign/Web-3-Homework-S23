@@ -1,6 +1,11 @@
 /* =============
     Buttons
 ============= */
+button{
+    cursor: pointer;
+}
+
+
 .yellow-link:link, .yellow-link:visited{
     background-color: var(--yellow);
     padding: 12px 16px;

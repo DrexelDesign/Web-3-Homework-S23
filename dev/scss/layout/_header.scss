@@ -2,18 +2,53 @@
     Header
 ============= */
 header {
-	#logo-nav {
-		display: grid;
-		grid-template-columns: 16px auto 16px;
-		grid-template-areas: ". logo-nav .";
-		background-color: var(--blueDark);
-		padding: 16px 0 24px;
+	position: fixed;
+	width: 100%;
+	top:0;
+	left: 0;
+	z-index: 500;
 
-		> div {
-			grid-area: logo-nav;
-			img {
+	#logo-nav {
+		background-color: var(--blueDark);
+		padding: 24px 16px;
+		display: grid;
+		grid-template-columns: 50% auto;
+		grid-template-areas: 
+		"logo burger"
+		"nav nav";
+
+		@include lg{
+			grid-template-areas: "logo nav"
+		}
+
+		#logo-container{
+			grid-area: logo;
+		}
+
+		#burger-container{
+			grid-area: burger;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			width: 100%;
+			@include lg{
+				display: none;
+			}
+
+			button{
+				border: none;
+				background-color: transparent;
+				color: var(--white);
+				font-size: rem-calc(25);
+				margin: 0;
+				padding: 0;
 			}
 		}
+
+		nav{
+			grid-area: nav;
+		}
+		
 	}
 
 	#search {
@@ -22,6 +57,7 @@ header {
 		grid-template-areas: ". search .";
 		background-color: var(--grayLight);
 		padding: 16px 0;
+		box-shadow: 0px 1px 1px rgba(42, 48, 54, 0.296793);
 
 		@include md {
 			padding: 24px 0;
@@ -41,7 +77,7 @@ header {
 					width: 100%;
 					border: none;
 					border-bottom: 1px solid var(--blueLight);
-					border-radius: 0;
+					border-radius: 0 !important;
 					background-color: transparent;
 					margin-right: 8px;
 

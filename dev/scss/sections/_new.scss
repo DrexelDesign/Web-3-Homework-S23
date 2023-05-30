@@ -2,6 +2,11 @@
     New
 ============= */
 #new {
+	// this is the offset magic
+	scroll-margin-top: var(--offset);
+	//  
+
+
 	@include md {
 		display: grid;
 		grid-template-columns: 16px auto 16px;
@@ -19,6 +24,7 @@
 
 		h1 {
 			margin-bottom: 16px;
+			padding-left: 16px;
 
 			@include md {
 				margin-bottom: 24px;
